@@ -1,0 +1,155 @@
+:root{
+    --primary-color:steelblue;
+    --text-primary:white;
+    --animation-speed:2s;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.5;
+    background: #333;
+    color:#fff;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+
+.page{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10rem;
+
+}
+
+.page h1{
+    font-size:3rem;
+    line-height: 1.2;
+
+}
+
+.page p{
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.page .btn{
+    text-decoration: none;
+    display: inline-block;
+    border:none;
+    background:black;
+    color:#fff;
+    padding:1rem 2rem;
+    border-radius: 2rem;
+    transition: all 0.3s ease-in;
+    transition: all .2s ;
+}
+
+.page .btn:hover{
+    padding:2rem 3rem;
+}
+
+
+
+.page .btn:hover{
+    background:var(--text-primary);
+    color:#333;
+    box-shadow: 10px 10px 20px #333,-10px -10px 20px #333;
+   
+}
+.page .btn-pre{
+    background:var(--text-primary);
+    color:#333;
+}
+
+
+
+
+.page .btn-pre:hover{
+     background:black;
+     color:var(--text-primary);
+     box-shadow: 10px 10px 20px #fff,-10px -10px 20px #fff;
+}
+
+
+#page-1:before{
+    content:'';
+    background: url('./images/pic1.jpg') no-repeat center center/cover;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    opacity:0.8;
+    z-index: -1;
+}
+
+#page-2:before{
+    content:'';
+    background: url('./images/pic2.jpg') no-repeat center center/cover;
+    position:absolute;
+    top:100vh;
+    left:0;
+    height:100%;
+    width:100%;
+    opacity:0.8;
+    z-index: -1;
+}
+
+
+#page-3:before{
+    content:'';
+    background: url('./images/pic3.jpg') no-repeat center center/cover;
+    position:absolute;
+    top:200vh;
+    left:0;
+    height:100%;
+    width:100%;
+    opacity:0.8;
+    z-index: -1;
+}
+
+
+#page-4:before{
+    content:'';
+    background: url('./images/pic4.jpg') no-repeat center center/cover;
+    position:absolute;
+    top:300vh;
+    left:0;
+    height:100%;
+    width:100%;
+    opacity:0.8;
+    z-index: -1;
+}
+
+
+#page-1 h1{
+    animation:heading-1 var(--animation-speed) forwards alternate ease-in-out;
+    transform: translateY(-1200px);
+}
+
+#page-1 p{
+    animation: paragraph-1 var(--animation-speed) forwards alternate ease-in;
+    transform: translateX(-1200px);
+}
+
+@keyframes heading-1 {
+    to{
+        transform: translateY(0);
+    }
+    
+    
+}
+
+@keyframes paragraph-1{
+    to{
+        transform: translateX(0);
+    }
+}
